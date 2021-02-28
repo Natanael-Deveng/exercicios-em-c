@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	float vc, vf;
+	char key; 
+	
+	while (key != 'f')
+	{
+		printf ("Digite o valor da compra: R$");
+		scanf ("%f", &vc);	
+			
+		printf ("Digite o valor fornecido: R$");
+		scanf ("%f", &vf);	
+		
+	if (vc>vf)
+	{
+		printf ("O valor fornecido não paga a compra.\n\n");
+	}
+	else
+	{
+	float tr = vf - vc;
+	
+	printf ("O troco do cliente é: R$%.2f\n\n", tr);
+	}
+	
+	printf ("Deseja obter outro troco? Pressione 'Enter' para continuar, ou a tecla 'f' para finalizar.\n\n");
+	
+	key = getche ();
+	}
+	return 0;
+}
