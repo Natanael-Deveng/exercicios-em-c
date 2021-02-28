@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	int vetor[5] = {};
+	int i, x, count;
+	
+	printf ("Digite 5 números inteiros e pressione enter.\n");
+	
+		for (i=0; i<5; i++)
+		{
+			scanf ("%d", &vetor[i]);
+		}
+
+		for (count=1; count < 5; count++)
+		{
+			for (i=0; i<4; i++)
+			{
+				if (vetor [i] > vetor [i+1])
+				{
+					x = vetor [i];
+					vetor [i] = vetor [i+1];
+					vetor [i+1] = x;
+				}
+			}
+		}
+		
+	printf ("A ordem crescente dos números é: ");
+	
+		for (i=0; i<5; i++)
+		{
+			printf("%d ", vetor [i]);
+		}
+		printf ("\n");
+		
+	system ("pause");
+}
