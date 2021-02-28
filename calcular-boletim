@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+
+int main ()
+{
+	int na;
+	float a1, a2;
+	int nf;
+	float ma;
+	float pf;
+	
+		printf ("Digite o numero de aulas:\n");
+		scanf ("%d", &na);
+		
+		printf ("Digite a nota da primeira prova:\n");
+		scanf ("%f", &a1);
+		
+		printf ("Digite a nota da segunda prova:\n");
+		scanf ("%f", &a2);
+		
+		printf ("Digite o numero de faltas:\n");
+		scanf ("%f", &nf);
+	
+	ma = (a1+a2)/2;
+	pf = (nf/na)*100;
+	
+		if ((ma>=7) and (pf>75))
+		{
+			printf ("O aluno esta aprovado! Sua media foi %.2f\n", ma);
+		}
+		
+		else if ((ma<3) and (pf>75))
+		{
+			printf ("O aluno foi reprovado por nota. Sua media foi %.2f\n", ma);
+		}
+		
+		else if ((ma>3) and (ma<7) and (pf>75))
+		{
+			printf ("O aluno tem direito a recuperacao. Sua media foi %.2f\n", ma);
+		}
+	
+		else if (pf<75)
+		{
+			printf ("O aluno foi reprovado por falta. Sua media foi %.2f\n", ma);
+		}	
+		
+	return 0;
+}
