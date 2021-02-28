@@ -1,0 +1,131 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+int main ()
+{
+	char modelo;
+	char S, N;
+	float ano;
+	float i;
+	char sexo;
+	char M, F;
+	float seg_1;
+	float seg_2;
+	float seg_3;
+	float seg_4;
+	float seg_5;
+	float seg_6;
+	float seg_7;
+	float seg_8;
+	float seg_9;
+	float seg_10;
+	
+		printf ("O modelo do seu carro é Gol, Fusca, Uno ou Corsa? Digite 'S' para sim e 'N' para nao.\n");
+		scanf ("%s", &modelo);
+		
+		printf ("Digite o ano do carro:\n");
+		scanf ("%f", &ano);
+		
+		printf ("Digite sua idade:\n");
+		scanf ("%f", &i);
+		
+		printf ("Digite o seu sexo (M ou F):\n");
+		scanf ("%s", &sexo);
+	
+	if (modelo == 'S')
+	{
+		if (ano<=2007)
+		{
+			if ((i>=18) and (i<=30))
+			{
+				if (sexo == 'M')
+				{
+					seg_1=500+(500*0.05);
+					printf ("O valor do seguro eh R$%.2f", seg_1);
+				}
+				
+				if (sexo == 'F')
+				{
+					seg_2=470+(470*0.05);
+					printf ("O valor do seguro eh R$%.2f", seg_2);
+				
+				}
+			}
+			
+			if (i>30)
+			{
+				if (sexo == 'M')
+				{
+					seg_3=450+(450*0.05);
+					printf ("O valor do seguro eh R$%.2f", seg_3);
+				}
+				
+				if (sexo == 'F')
+				{
+					seg_4=430+(430*0.05);
+					printf ("O valor do seguro eh R$%.2f", seg_4);	
+				}
+			}
+		}
+		if (ano>=2008)
+		{
+			if (i>=18)
+			{
+				if ((sexo == 'F') or (sexo == 'M'))
+				{
+					seg_5=600+(600*0.05);
+					printf ("O valor do seguro eh R$%.2f", seg_5);
+				}
+			}
+		}
+	}
+	
+	else if (modelo == 'N')
+	{
+		if (ano<=2007)
+		{
+			if ((i>=18) and (i<=30))
+			{
+				if (sexo == 'M')
+				{
+					seg_10=500;
+					printf ("O valor do seguro eh R$%.2f", seg_10);
+				}
+				
+				if (sexo == 'F')
+				{
+					seg_9=470;
+					printf ("O valor do seguro eh R$%.2f", seg_9);
+				
+				}
+			}
+			if (i>30)
+			{
+				if (sexo == 'M')
+				{
+					seg_8=450;
+					printf ("O valor do seguro eh R$%.2f", seg_8);
+				}
+				
+				if (sexo == 'F')
+				{
+					seg_7=430;
+					printf ("O valor do seguro eh R$%.2f", seg_7);	
+				}
+			}
+		}
+		if (ano>=2008)
+		{
+			if (i>=18)
+			{
+				if ((sexo == 'F') or (sexo == 'M'))
+				{
+					seg_6=600;
+					printf ("O valor do seguro eh R$%.2f", seg_6);
+				}
+			}
+		}
+	}
+	return 0;
+}
