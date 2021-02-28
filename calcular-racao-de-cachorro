@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	float pc, ps, dias;
+	
+	printf ("Qual é o peso, em quilogramas, do teu cachorro? ");
+	scanf ("%f", &pc);
+	
+	printf ("Quantos quilogramas tem o saco de ração? ");
+	scanf ("%f", &ps);
+	
+	if ((pc>0) and (pc<=5))
+	{
+		dias = (ps*1000)/60;
+		printf ("O pacote de ração durará aproximadamente %.1f dias.", dias);
+	}
+	
+	else if ((pc>5) and (pc<11))
+	{
+		dias = (ps*1000)/95;
+		printf ("O pacote de ração durará aproximadamente %.1f dias.", dias);
+	}
+	
+	else if ((pc>=11) and (pc<16))
+	{
+		dias = (ps*1000)/135;
+		printf ("O pacote de ração durará aproximadamente %.1f dias.", dias);
+	}
+	
+	else if ((pc>=16) and (pc<21))
+	{
+		dias = (ps*1000)/170;
+		printf ("O pacote de ração durará aproximadamente %.1f dias.", dias);
+	}
+	
+	else if (pc>=21) 
+	{
+		dias = (ps*1000)/215;
+		printf ("O pacote de ração durará aproximadamente %.1f dias.", dias);
+	}
+	return 0;
+}
