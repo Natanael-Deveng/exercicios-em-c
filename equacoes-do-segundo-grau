@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+
+int main ()
+{
+	system ("Title Solucionador de equações do segundo grau");
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+		printf ("\n ****** Um algoritmo para calcular as raízes de uma equação do segundo grau com precisão de duas casas decimais ******\n\n");
+	
+	float a, b, c;
+	
+		printf ("Seja a, b e c os coeficientes reais da equação desejada.\n\n");
+	
+	char key;
+	
+	while (key != 'f')	
+		{
+	
+			printf ("Digite o valor de a:\n");
+			scanf ("%f", &a);
+	
+			printf ("Digite o valor de b:\n");
+			scanf ("%f", &b);
+	
+			printf ("Digite o valor de c:\n");
+			scanf ("%f", &c);
+		
+		float delta = pow(b, 2)-4*a*c;
+	
+		if (delta >= 0)
+		{
+			float r1 = (-b+sqrt(pow(b, 2)-4*a*c))/(2*a);
+			float r2 = (-b-sqrt(pow(b, 2)-4*a*c))/(2*a);
+		
+			printf("\nAs raízes da equação são x\'=%.2f e x\"=%.2f.\n\n", r1, r2);
+		} 
+		
+		else 
+		{
+			float re = -b/(2*a);
+			float im = (sqrt((pow(b, 2)-4*a*c)*-1))/(2*a);
+	
+			printf("\nAs raízes da equação são x\'=%.2f + %.2fi e x\"=%.2f - %.2fi.\n\n", re, im, re, im);
+		}
+		
+	printf ("Deseja resolver outra equação? Pressione 'Enter' para continuar, ou a tecla 'f' para finalizar.\n\n");
+	
+	key = getche ();
+	}
+	return 0;
+}
