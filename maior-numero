@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	int i, num[5]={};
+	int MAX = -1000000;
+	
+	printf ("Digite 5 números inteiros:\n");
+	
+	for (i=0; i<5; i++)
+	{
+		scanf ("%d", &num[i]);
+	}
+	
+	for (i=0; i<5; i++)
+	{
+		if (num[i]>MAX)
+		{
+			MAX = num[i];
+		}
+	}
+	
+	printf ("O maior número é: %d", MAX);
+
+	printf ("\n\n");
+	system ("Pause");
+}
