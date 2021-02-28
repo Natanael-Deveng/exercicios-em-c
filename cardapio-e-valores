@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <conio.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	int cod;
+	int ql;
+	float valor, vf, troco, resto;
+	char key;
+	
+	while (key != 'f')
+	{
+		printf ("Digite o codigo do lanche:");
+		scanf ("%d", &cod);
+		
+		printf ("Quantos desse lanche foi comprado?");
+		scanf ("%d", &ql);
+		
+		if (cod == 100)
+		{
+			valor = ql*1.7;
+			printf ("O valor final e: R$%.2f\n\n", valor);
+		}
+		
+		else if (cod == 101)
+		{
+			valor = ql*2.3;
+			printf ("O valor final e: R$%.2f\n\n", valor);
+		}	
+		
+		else if (cod == 102)
+		{
+			valor = ql*2.6;
+			printf ("O valor final e: R$%.2f\n\n", valor);
+		}
+		
+		else if (cod == 103)
+		{
+			valor = ql*2.4;
+			printf ("O valor final e: R$%.2f\n\n", valor);
+		}
+		
+		else if (cod == 104)
+		{
+			valor = ql*2.5;
+			printf ("O valor final e: R$%.2f\n\n", valor);
+		}
+		
+		else if (cod == 105)
+		{
+			valor = ql*1.00;
+			printf ("O valor final e: R$%.2f\n\n", valor);
+		}
+		
+		else
+		{
+			printf ("\nCódigo inválido, tente novamente!\n\n");
+			
+		}
+		
+		if ((cod == 100)or (cod == 101)or (cod == 102) or (cod == 103) or (cod == 104) or (cod == 105))
+		{
+		
+			printf ("Digite o valor fornecido: R$");
+			scanf ("%f", &vf);
+			
+			if (vf<valor)
+			{
+				resto = valor - vf;
+				printf ("O valor fornecido não paga a compra! Está faltando R$%.2f.\n\n", resto);
+			}
+			
+			if (vf>=valor)
+			{
+				troco = vf - valor;
+				printf ("O troco do cliente é: R$%.2f\n\n", troco);
+			}
+		}
+		
+	printf ("Deseja calcular outro lanche? Pressione 'Enter' para continuar, ou a tecla 'f' para finalizar.\n\n");
+	key = getche ();
+	}	
+	return 0;
+}
