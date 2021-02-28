@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+
+int main (void)
+{
+	float p;
+	float a;
+	char sexo;
+	char f, m;
+	
+		printf ("Digite o seu peso(kg):\n");
+		scanf ("%f", &p);
+		
+		printf ("Digite a sua altura(m):\n");
+		scanf ("%f", &a);
+		
+		printf ("Digite o seu sexo (M ou F):\n");
+		scanf ("%s", &sexo);
+		
+			if (sexo == 'm')
+			{
+				float pi_m = (72.7*a)-58;
+				
+				if (p>pi_m)
+				{
+					printf ("Seu peso eh %.2fkg e seu peso ideal eh %.2fkg, ou seja, voce esta acima do peso!", p, pi_m);
+				}
+				
+				if (p<pi_m)
+				{
+					printf ("Seu peso eh %.2fkg e seu peso ideal eh %.2fkg, ou seja, voce esta abaixo do peso!", p, pi_m);
+				}
+				
+			}
+			
+			else if (sexo == 'f')
+			{
+				
+				float pi_f = (62.1*a) - 44.70 ;
+				
+				if (p>pi_f)
+				{
+					printf ("Seu peso eh %.2fkg e seu peso ideal eh %.2fkg, ou seja, voce esta acima do peso!", p, pi_f);
+				}
+				
+				if (p<pi_f)
+				{
+					printf ("Seu peso eh %.2fkg e seu peso ideal eh %.2fkg, ou seja, voce esta abaixo do peso!", p, pi_f);
+				}
+			
+			}
+	
+	return 0;
+}
