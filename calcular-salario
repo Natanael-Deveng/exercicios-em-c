@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	/*Calcular o salário líquido do funcionário sabendo que este é constituído pelo salário bruto mais o valor das 
+	horas extras subtraindo 8% de INSS do total. Serão lidos nesse problema o salário bruto, o valor das horas extras e o numero de horas extras. 
+	Apresentar ao final o salário líquido. */
+	
+	float s_b;
+	float v_he;
+	float n_he;
+	
+	printf ("\n****** Cálculo do salário líquido de um funcionário ******\n\n");
+	
+	printf ("Digite o valor do salário bruto:\n");
+	scanf ("%f", &s_b);
+	
+	printf ("Digite o valor de horas extras:\n");
+	scanf ("%f", &v_he);
+	
+	printf ("Digite o número de horas extras:\n");
+	scanf ("%f", &n_he);
+	
+	float soma = s_b + v_he * n_he;
+	float s_l = soma - (8*soma)/100;
+	
+	printf ("O salário líquido do funcionário é: R$%.2f\n", s_l);
+	
+
+	
+	
+	
+	system ("pause");
+	return 0;
+}
