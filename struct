@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	struct dados_cliente
+	{
+		char nome [50], endereço[50];
+		int cpf, rg;
+	};
+	
+	struct dados_cliente;
+	
+	return 0;
+}
