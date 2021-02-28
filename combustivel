@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+
+/*Calcular a média de combustível gasto pelo usuário, sendo informado a quantidade de quilômetros rodados e a quantidade de combustível consumido.*/
+
+int main() {
+	
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	printf ("\n****** Cálculo de consumo de combustível em km/L ******\n\n");
+	
+  float d,v,c;
+
+  printf("Digite a distância percorrida em quilômetros:\n");
+  scanf("%f", &d);
+
+  printf("Digite o volume gasto de combustível em litros:\n");
+  scanf("%f", &v);
+
+  c = d/v;
+  
+  printf("O consumo médio de combustível é de:\n");
+  printf("%.2f km/l\n", c);
+
+  return 0;
+}
