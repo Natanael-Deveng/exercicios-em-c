@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+	setlocale (LC_ALL, "Portuguese_Brazil");
+	
+	int i, positivos = 0, negativos = 0, neutro = 0;
+	int num [10] = {};
+	
+	printf ("Digite 5 números inteiros:\n");
+	
+	for (i=0; i<10; i++)
+	{
+		scanf ("%d", &num[i]);
+	}
+	
+	printf ("\nOs números positivos são: ");
+	
+	for (i=0; i<10; i++)
+	{
+		if (num[i]>0)
+		{
+			printf ("%d ", num[i]);
+			positivos++;
+		}
+	}
+	printf ("\n");
+	printf ("Os números negativos são: ");
+	
+	for (i=0; i<10; i++)	
+	{
+		if (num [i]<0)
+		{
+			printf ("%d ", num [i]);
+			negativos++;
+		}
+	}
+		
+	for (i=0; i<10; i++)	
+	{
+		if (num [i]==0)
+		{
+			printf ("\nO 0 é um número neutro.");
+			neutro++;
+		}
+	}
+	
+	printf ("\n\nSão %d números positivos, %d número neutro e %d números negativos.", positivos, neutro, negativos);
+	
+	
+	printf ("\n\n");
+	system ("pause");
+}
